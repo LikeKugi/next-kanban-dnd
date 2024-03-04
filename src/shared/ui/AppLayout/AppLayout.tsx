@@ -8,7 +8,7 @@ const AppLayout: FC<PropsWithChildren> = ({children}): JSX.Element => {
       <Header>
         Kanban Board
       </Header>
-      <Content style={{flexGrow: 1}}>
+      <Content style={{flexGrow: 1, display: 'flex', flexDirection: 'column'}}>
         {children}
       </Content>
     </Layout>
