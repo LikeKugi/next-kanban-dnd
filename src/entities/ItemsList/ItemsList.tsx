@@ -1,3 +1,4 @@
+'use client'
 import { FC, JSX } from 'react';
 import { IItem } from '@/shared/types';
 import { Draggable, Droppable } from '@hello-pangea/dnd';
@@ -18,7 +19,8 @@ const ItemsList: FC<IItemsListProps> = ({items, listId, listType}): JSX.Element 
               {(dragProvided, dragSnapshot) => (
                 <p key={item.id} ref={dragProvided.innerRef}
                    {...dragProvided.draggableProps}
-                   {...dragProvided.dragHandleProps}>{item.content}</p>
+                   {...dragProvided.dragHandleProps}>{item.content}
+                  <button onClick={() => {console.log(item)}}>click</button></p>
               )}
             </Draggable>
           ))}

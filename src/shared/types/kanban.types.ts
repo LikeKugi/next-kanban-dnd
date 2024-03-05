@@ -29,3 +29,9 @@ export interface IItem  {
 export type IItems = IItem[];
 
 export type IKanbanBoard = Record<string, IItems>
+
+export interface INewSprintForm {
+  title: string;
+  description: string;
+  date: Date;
+}
